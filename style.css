@@ -1,0 +1,154 @@
+html, body {
+  height: 100%;
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 2.5fr;
+  height: 100%;
+}
+
+.grid-column {
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.grid-column.grid-column-1 {
+  text-align: center;
+}
+
+.grid-column.grid-column-3 {
+  border-right: none;
+}
+
+.nav {
+  margin: 0px 0px 20px 0px;
+}
+
+.nav-item {
+  color: #333;
+  height: 30px;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-item:hover {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.panel {
+  justify-content: space-between;
+}
+
+.primary {
+  font-weight: 900;
+  height: 60px;
+  border-bottom: 1px #b0b0b0 solid;
+}
+
+.focus-button {
+  border-top: 1px #b0b0b0 solid;
+}
+
+.folder-toggle {
+  padding: 5px;
+}
+
+.folder-toggle:hover {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.nav-title {
+  display: flex;
+  flex-direction: flex-start;
+  align-items: center;
+  padding: 0px 10px;
+  height: 20px;
+  font-weight: 50;
+  color: #737373;
+  font-size: 14px;
+}
+
+.content-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.google-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.fullscreen-iframe {
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 75%;
+  border: none;
+  z-index: 11; /* Ensure the iframe is above the background overlay */
+  transform: translate(-50%, -50%); /* Center the iframe */
+}
+
+.background-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 10; /* Ensure the background overlay is below the iframe */
+}
+
+.folder-container {
+  padding-left: 30px;
+}
+
+.editor-body {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.editor-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.editor {
+  width: 80%;
+  min-height: 80%;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow-y: auto;
+  resize: both;
+  outline: none;
+}
+
+.editor:focus {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
